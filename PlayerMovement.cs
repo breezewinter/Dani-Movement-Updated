@@ -56,6 +56,7 @@ public class PlayerMovement : MonoBehaviour
     
     private void FixedUpdate() {
         Movement();
+        CrouchController();
     }
 
     private void Update() {
