@@ -1,1 +1,2 @@
 Put the capsule and camera objects into a new empty object called "PlayerObject" then add the input script to the PlayerObject and drag the movement script into the capsule object. Follow all steps that dani gives in his tutorial but drag the PlayerObject into the varibale where it says input in unity when viewing components of the capsule. Dani's tutorial: https://www.youtube.com/watch?v=XAC8U9-dTZU
+You also want do drag in the player capsule object into the field labeled playerMovement while inspecting the PlayerObject components
