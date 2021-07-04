@@ -56,26 +56,13 @@ public class PlayerMovement : MonoBehaviour
     
     private void FixedUpdate() {
         Movement();
-        CrouchController();
     }
 
     private void Update() {
         Look();
     }
 
-    private void CrouchController()
-    {
-        if (input.crouching)
-        {
-            StartCrouch();
-        }
-        else
-        {
-            StopCrouch();
-        }
-    }
-
-    private void StartCrouch() {
+    public void StartCrouch() {
         transform.localScale = crouchScale;
         transform.position = new Vector3(transform.position.x, transform.position.y - 0.5f, transform.position.z);
         if (rb.velocity.magnitude > 0.5f) {
@@ -85,7 +72,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void StopCrouch() {
+    public void StopCrouch() {
         transform.localScale = playerScale;
         transform.position = new Vector3(transform.position.x, transform.position.y + 0.5f, transform.position.z);
     }
