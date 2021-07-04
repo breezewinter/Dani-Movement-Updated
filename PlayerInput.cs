@@ -7,6 +7,9 @@ public class PlayerInput : MonoBehaviour
     [System.NonSerialized] public float x, y;
     [System.NonSerialized] public bool jumping, sprinting, crouching;
 
+    // Assignables
+    public PlayerMovement playerMovement;
+
     private void Update()
     {
         MyInput();
@@ -20,8 +23,8 @@ public class PlayerInput : MonoBehaviour
       
         //Crouching
         if (Input.GetKeyDown(KeyCode.LeftControl))
-            crouching = true;
+            playerMovement.StartCrouch();
         if (Input.GetKeyUp(KeyCode.LeftControl))
-            crouching = false;
+            playerMovement.StopCrouch();
     }
 }
